@@ -20,6 +20,7 @@
 
     <script>
     var $out = $("#output");
+      $out.append("$&gt;<input></input>");
     $("#screen input").focus();
     $("#screen input").on('keydown', function(event) {
         if(event.which === 13) { // Enter key pressed
