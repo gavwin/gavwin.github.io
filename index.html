@@ -14,28 +14,23 @@
 
     <div id="screen">Welcome to Terminal Mystery.
       <br>A command line mystery game created by Gavin Wainwright (i am toast)
-      <div id="inputLine"></div>
+      <br>$&gt;<input></input>
       <div id="output"></div>
     </div>
 
     <script>
     var $out = $("#output");
-      var $inputLine = $("#inputLine");
-      $inputLine.append("$&gt;<input></input>");
     $("#screen input").focus();
     $("#screen input").on('keydown', function(event) {
         if(event.which === 13) { // Enter key pressed
             var $this = $(this),
                 val = $this.val();
             $this.focus().val('');
-          $inputLine.remove("$&gt;<input></input>");
             if(val === "") {
               $out.append("<br>");
-              $inputLine.append("$&gt;<input></input>");
             } else
             if(val === "hello world") {
                 $out.append("Hello Galaxy.<br>");
-              $inputLine.append("$&gt;<input></input>");
             } else
             if(val === "breach") {
               $out.append("Breaching");
@@ -45,18 +40,13 @@
               setTimeout(function() { $out.append("."); }, 4000);
               setTimeout(function() { $out.append(".<br>"); }, 5000);
               setTimeout(function() { $out.append("Successfully breached the firewall.<br>"); }, 6250);
-              $inputLine.append("$&gt;<input></input>");
             } else
             if(val === "help") {
                 $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>");
-              $inputLine.append("$&gt;<input></input>");
             }
-
             else {
               $out.append("Command not found.<br>");
-              $inputLine.append("$&gt;<input></input>");
             }
-
             $this.val('');
         }
     });
