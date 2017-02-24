@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Terminal Mystery</title>
+  <meta name="author" content="Gavin Wainwright">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="typed.css" type="text/css">
+  <script src="typed.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div id="computer">
+    <div id="screen">$&gt;<input></input></div>
+
+    <script>
+    $("#screen input").focus();
+    $("#screen input").on('keydown', function(event) {
+        if(event.which === 13) {// Enter key pressed
+            var $this = $(this),
+                val = $this.val();
+            $this.focus().val('');
+            if(val === "hello world"){
+                alert("you found the easter egg!");
+            }
+        }
+    });
+    </script>
+</div>
+
+  </body>
+</html>
