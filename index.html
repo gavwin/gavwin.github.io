@@ -44,6 +44,7 @@
                 $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>");
             }
             else {
+              $out.append(`$&gt; ${val}`);
               $out.append("Command not recognized.<br>");
             }
             $this.val('');
