@@ -12,21 +12,43 @@
   </head>
   <body>
 
-    <div id="screen">$&gt;<input></input></div>
+    <div id="screen">$&gt;<input></input>
+    <div id="output"></div>
+    </div>
 
     <script>
+    var $out = $("#output");
     $("#screen input").focus();
     $("#screen input").on('keydown', function(event) {
-        if(event.which === 13) {// Enter key pressed
+        if(event.which === 13) { // Enter key pressed
             var $this = $(this),
                 val = $this.val();
             $this.focus().val('');
             if(val === "hello world") {
-                //respond with something in the terminal here
+                $out.append("Hello Galaxy.<br>");
+            } else
+            if(val === "help") {
+                $out.append("Hello Galaxy.<br>");
             }
+
+            else {
+              $out.append("Command not found.<br>");
+            }
+
+            $this.val('');
         }
     });
-    </script>
 
+    $(function(){
+        $("#typed").typed({
+            stringsElement: $('#typed-strings')
+        });
+    });
+    </script>
+    <div id="typed-strings">
+        <p>Typed.js is a <strong>jQuery</strong> plugin.</p>
+        <p>It <em>types</em> out sentences.</p>
+    </div>
+    <span id="typed"></span>
   </body>
 </html>
