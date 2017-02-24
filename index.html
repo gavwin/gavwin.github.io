@@ -7,35 +7,14 @@
   <meta name="description" content="description here">
   <meta name="keywords" content="keywords,here">
   <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="typed.css" type="text/css">
   <script src="typed.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   </head>
   <body>
 
-    <div id="screen">$&gt;<input type="text" id="input"></input></div>
-    <ul id="myUL"></ul>
+    <div id="screen">$&gt;<input></input></div>
 
     <script>
-
-    function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("input").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("input").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
     $("#screen input").focus();
     $("#screen input").on('keydown', function(event) {
         if(event.which === 13) {// Enter key pressed
@@ -43,16 +22,11 @@
                 val = $this.val();
             $this.focus().val('');
             if(val === "hello world") {
-                alert("you found the easter egg!");
-            }
-            if(val === "help" || val === "h") {
-                newElement();
+                //respond with something in the terminal here
             }
         }
     });
-  }
     </script>
-</div>
 
   </body>
 </html>
