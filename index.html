@@ -32,6 +32,14 @@
             if(val === "hello world") {
                 $out.append("Hello Galaxy.<br>");
             } else
+            if(val === "breach") {
+              $out.append("Breaching");
+              setTimeout(function() { $out.append("."); }, 1000);
+              setTimeout(function() { $out.append("."); }, 2000);
+              setTimeout(function() { $out.append("."); }, 3000);
+              setTimeout(function() { $out.append("."); }, 4000);
+              setTimeout(function() { $out.append("."); }, 5000);
+            }
             if(val === "help") {
                 $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>");
             }
