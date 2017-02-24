@@ -28,7 +28,7 @@
             var $this = $(this),
                 val = $this.val();
             $this.focus().val('');
-          $inputLine.remove();
+          $inputLine.remove("$&gt;<input></input>");
             if(val === "") {
               $out.append("<br>");
               $inputLine.append("$&gt;<input></input>");
