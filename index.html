@@ -25,6 +25,9 @@
             var $this = $(this),
                 val = $this.val();
             $this.focus().val('');
+            if(val === "") {
+              $out.append("<br>");
+            } else
             if(val === "hello world") {
                 $out.append("Hello Galaxy.<br>");
             } else
