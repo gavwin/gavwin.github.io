@@ -13,17 +13,39 @@
   </head>
   <body>
 
-    <div id="screen">$&gt;<input></input></div>
+    <div id="screen">$&gt;<input id="input"></input></div>
 
     <script>
+
+    function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("input").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("input").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
     $("#screen input").focus();
     $("#screen input").on('keydown', function(event) {
         if(event.which === 13) {// Enter key pressed
             var $this = $(this),
                 val = $this.val();
             $this.focus().val('');
-            if(val === "hello world"){
+            if(val === "hello world") {
                 alert("you found the easter egg!");
+            }
+            if(val === "help" || val === "h") {
+                newElement();
             }
         }
     });
