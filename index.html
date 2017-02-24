@@ -15,7 +15,7 @@
     <div id="screen">Welcome to Terminal Mystery.
       <br>A command line mystery game created by Gavin Wainwright (i am toast)
       <div id="output"></div>
-            <br>$&gt;<input></input>
+       $&gt;<input></input>
     </div>
 
     <script>
@@ -29,10 +29,8 @@
             if(val === "") {
               $out.append("<br>");
             } else
-            if(val === "hello world") {
-                $out.append("Hello Galaxy.<br>");
-            } else
             if(val === "breach") {
+              $out.append("$&gt; breach<br>");
               $out.append("Breaching");
               setTimeout(function() { $out.append("."); }, 1000);
               setTimeout(function() { $out.append("."); }, 2000);
@@ -42,10 +40,11 @@
               setTimeout(function() { $out.append("Successfully breached the firewall.<br>"); }, 6250);
             } else
             if(val === "help") {
+              $out.append("$&gt; help<br>");
                 $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>");
             }
             else {
-              $out.append("Command not found.<br>");
+              $out.append("Command not recognized.<br>");
             }
             $this.val('');
         }
