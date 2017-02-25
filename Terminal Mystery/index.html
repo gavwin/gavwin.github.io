@@ -85,6 +85,11 @@
                     $out.append("gavin@localhost:~$ inbox<br>");
                     $out.append("Your Inbox:<br>↳ need your help");
                 } else
+                    if(val.startsWith("connect")) {
+                                           if(!cmds.includes(val)) {
+                                               $out.append(`gavin@localhost:~$ ${val}<br>`);
+                                               $out.append(`Login attempt failed. Incorrect host or password '${val.substring(8)}'.<br>`);
+                                           }
                 if (val === "connect root m4sk") {
                     $out.append("gavin@localhost:~$ connect root m4sk<br>");
                         $out.append("Connecting");
@@ -105,10 +110,11 @@
                     }, 5000);
                     var m4skRandom = m4skChance[Math.floor(Math.random()*m4skChance.length)];
                     setTimeout(function() { window.location.href = m4skRandom }, 5100);
-                    } else if(val !== "connect root m4sk" && !cmds.includes(val)) {
-                        $out.append(`gavin@localhost:~$ ${val}<br>`);
-                        $out.append("Login attempt failed. Incorrect username or password.<br>");   
-                    } else
+                    else if(val === "connect") {
+                        $out.append("gavin@localhost:~$ connect<br>");
+                        $out.append("Specify a host and password to connect to.<br>");
+                    }      
+                } else
                 /*if (val === "breach") {
                     $out.append("gavin@localhost:~$ breach<br>");
                     $out.append("Breaching");
