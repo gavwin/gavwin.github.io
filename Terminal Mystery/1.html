@@ -44,10 +44,7 @@
      "connect",
      "connect root m4sk",
  ];
- var m4skChance = [
-     "https://gavwin.github.io/Terminal%20Mystery/m4sk.html",
-     "https://gavwin.github.io/Terminal%20Mystery/connection-failed.html",
- ];
+
  var $out = $("#output");
  $("#screen input").focus();
  $("#screen input").on("keydown", function(event) {
@@ -89,7 +86,6 @@
                  } else
                      if(val.startsWith("connect")) {
                        if(val === "connect root m4sk") {
-                         var m4skRandom = m4skChance[Math.floor(Math.random() * m4skChance.length)];
                          $out.append("gavin@localhost:~$ connect root m4sk<br>");
                          $out.append("Connecting");
                          setTimeout(function() { $out.append("."); }, 1000);
@@ -97,7 +93,7 @@
                          setTimeout(function() { $out.append("."); }, 3000);
                          setTimeout(function() { $out.append("."); }, 4000);
                          setTimeout(function() { $out.append("."); }, 5000);
-                         setTimeout(function() { window.location.href = m4skRandom; }, 5100);
+                         setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%Mystery/m4sk"; }, 5100);
                        } else if(val === "connect") {
                          $out.append("gavin@localhost:~$ connect<br>");
                          $out.append("Specify a host and password to connect to.<br>");
