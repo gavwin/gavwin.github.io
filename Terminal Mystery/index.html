@@ -67,7 +67,23 @@
                 } else
                 if (val === "connect root m4sk") {
                     $out.append("gavin@localhost:~$ connect root m4sk<br>");
-                        $out.append("Successfully established a connection to root@m4sk.<br>");
+                        $out.append("Connecting");
+                    setTimeout(function() {
+                        $out.append(".");
+                    }, 1000);
+                    setTimeout(function() {
+                        $out.append(".");
+                    }, 2000);
+                    setTimeout(function() {
+                        $out.append(".");
+                    }, 3000);
+                    setTimeout(function() {
+                        $out.append(".");
+                    }, 4000);
+                    setTimeout(function() {
+                        $out.append(".<br>");
+                    }, 5000);
+                    setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%Mystery/m4sk.html"; }, 5100);
                     } else if(val !== "connect root m4sk" && !cmds.includes(val)) {
                         $out.append(`gavin@localhost:~$ ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect username or password.<br>");   
