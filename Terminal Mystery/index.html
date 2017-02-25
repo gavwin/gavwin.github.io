@@ -15,16 +15,21 @@
 </head>
 
 <body>
-    <div id="screen">
+
+    <div id="screen">Welcome to Terminal Mystery.
+        <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>
+        <br>Original idea from Hacker's Quest
+        <br>Type 'help' for a list of commands
         <div id="output"></div>
-        Welcome to Terminal Mystery.<br>A command line mystery game created by <a href='https://github.com/gavwin'>Gavin Wainwright</a>.<br>Original idea from Hacker's Quest.<br>Type 'help' for a list of commands.
-        <br><br>$&gt;<input></input>
+        $&gt;
+        <input></input>
     </div>
+<div class="element"></div>
     <script>
   $(function(){
-      $(".type").typed({
-        strings: [""],
-        typeSpeed: 1
+      $(".element").typed({
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 0
       });
   });
 </script>
