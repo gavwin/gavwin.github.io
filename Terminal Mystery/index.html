@@ -57,6 +57,8 @@
                     $out.append("Password:<br>");
                     if(val === "m4sk") {
                         $out.append("Successfully established a connection to root@m4sk.<br>");
+                    } else {
+                        $out.append("Login attempt failed. Incorrect password.<br>");   
                     }
                 } else
                 if (val === "show favor") {
