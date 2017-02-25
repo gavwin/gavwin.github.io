@@ -118,28 +118,8 @@
                              $out.append("Specify a host and password to connect to.<br>");
                          }
                      } else*/
-                     if (val === "breach") {
-                         $out.append("gavin@localhost:~$ breach<br>");
-                         $out.append("Breaching");
-                         setTimeout(function() {
-                             $out.append(".");
-                         }, 1000);
-                         setTimeout(function() {
-                             $out.append(".");
-                         }, 2000);
-                         setTimeout(function() {
-                             $out.append(".");
-                         }, 3000);
-                         setTimeout(function() {
-                             $out.append(".");
-                         }, 4000);
-                         setTimeout(function() {
-                             $out.append(".<br>");
-                         }, 5000);
-                         setTimeout(function() {
-                             $out.append("Successfully breached the firewall.<br>");
-                         }, 6250);
-                     } else {
+                     //else 
+                 {
                          $out.append(`gavin@localhost:~$ ${val}<br>`);
                          $out.append("Command not recognized.<br>");
                      }
