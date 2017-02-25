@@ -40,6 +40,7 @@
      "show",
      "show its time",
      "exit",
+     "ls",
  ];
 
  var $out = $("#output");
@@ -51,6 +52,10 @@
                  $this.focus().val("");
                  if (val === "") {
                      $out.append("root@m4sk:~$<br>");
+                 } else
+                 if (val === "ls") {
+                     $out.append("root@m4sk:~$ ls<br>");
+                     $out.append("root<br>↳ plans<br>-↳peru<br>");
                  } else
                  if (val === "help") {
                      $out.append("root@m4sk:~$ help<br>");
