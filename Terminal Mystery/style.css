@@ -14,7 +14,7 @@ height:99%;
 width:99%;
 margin:0.5% auto;
 }
-#screen, .type {
+#screen {
 /*border:inset #555 4px;*/
 background:#222;
 /*border-radius*/
@@ -24,6 +24,29 @@ background:#222;
     height:80%;
     width:85%;
     margin:1em auto;
+    padding:5%;
+    font-family: "Courier new", "american typewriter";
+    font-weight: 400;
+    font-size: .8em;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    color: #58bf1d;
+    /* CSS3 properties */
+    -webkit-text-shadow: 0px 0px 3px rgba(88,191,29,0.5);
+    -moz-text-shadow: 0px 0px 3px rgba(88,191,29,0.5);
+    -ms-text-shadow: 0px 0px 3px rgba(88,191,29,0.5);
+    -o-text-shadow: 0px 0px 3px rgba(88,191,29,0.5);
+    text-shadow: 0px 0px 3px rgba(88,191,29,0.5);
+}
+.type {
+/*border:inset #555 4px;*/
+background:#222;
+/*border-radius*/
+/*-webkit-border-radius:0.5em;
+   -moz-border-radius:0.5em;
+        border-radius:0.5em;*/
+    height:80%;
+    width:85%;
     padding:5%;
     font-family: "Courier new", "american typewriter";
     font-weight: 400;
