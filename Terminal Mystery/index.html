@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery. (v0.1.83)
+    <div id="screen">Welcome to Terminal Mystery. (v0.1.4)
         <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -94,7 +94,7 @@
                  if (val === "clear") {
                      $out.empty();
                  } else
-                 if (val.startsWith("show")) {
+                /* if (val.startsWith("show")) {
                      if (!cmds.includes(val)) {
                          $out.append(`gavin@localhost:~$ ${val}<br>`);
                          $out.append(`Could not find a file / message with the name of '${val.substring(5)}'.<br>`);
@@ -106,7 +106,7 @@
                          $out.append("gavin@localhost:~$ show<br>");
                          $out.append("Specify a file / message to show.<br>");
                      }
-                 } else
+                 } else*/
                          /*if (val.startsWith("connect")) {
                              if (!cmds.includes(val)) {
                                  $out.append(`gavin@localhost:~$ ${val}<br>`);
