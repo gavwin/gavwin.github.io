@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery. (v0.4.2
+    <div id="screen">Welcome to Terminal Mystery. (v0.4.2)
         <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -84,7 +84,28 @@
                          $out.append("Specify a file / message to show.<br>");
                      }
                  } else
-                /* if (val.startsWith("connect")) {
+                     //else 
+                 {
+                         $out.append(`gavin@localhost:~$ ${val}<br>`);
+                         $out.append("Command not recognized.<br>");
+                     }
+                     $this.val("");
+                 }
+             });
+    </script>
+    <script>
+        var m4skChance = [
+     "https://gavwin.github.io/Terminal%20Mystery/m4sk.html",
+     "https://gavwin.github.io/Terminal%20Mystery/connection-failed.html",
+ ];
+ var $out = $("#output");
+ $("#screen input").focus();
+ $("#screen input").on("keydown", function(event) {
+             if (event.which === 13) { // Enter key pressed
+                 var $this = $(this),
+                     val = $this.val();
+                 $this.focus().val("");
+        /* if (val.startsWith("connect")) {
                      if (!cmds.includes(val)) {
                          $out.append(`gavin@localhost:~$ ${val}<br>`);
                          $out.append(`Login attempt failed. Incorrect host or password '${val.substring(8)}'.<br>`);
@@ -116,12 +137,7 @@
                              $out.append("Specify a host and password to connect to.<br>");
                          }
                      } else*/
-                     //else 
-                 {
-                         $out.append(`gavin@localhost:~$ ${val}<br>`);
-                         $out.append("Command not recognized.<br>");
-                     }
-                     $this.val("");
+                                      $this.val("");
                  }
              });
     </script>
