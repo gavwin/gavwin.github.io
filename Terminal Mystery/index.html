@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery.        (v0.4.4)
+    <div id="screen">Welcome to Terminal Mystery.        (v0.4.5)
         <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -86,8 +86,15 @@
                  } else
                      if(val.startsWith("connect")) {
                        if(val === "connect root m4sk") {
+                         var m4skRandom = m4skChance[Math.floor(Math.random() * m4skChance.length)];
                          $out.append("gavin@localhost:~$ connect root m4sk<br>");
                          $out.append("Connecting");
+                         setTimeout(function() { $out.append("."); }, 1000);
+                         setTimeout(function() { $out.append("."); }, 2000);
+                         setTimeout(function() { $out.append("."); }, 3000);
+                         setTimeout(function() { $out.append("."); }, 4000);
+                         setTimeout(function() { $out.append("."); }, 5000);
+                         setTimeout(function() { window.location.href = m4skRandom; }, 5100);
                        } else if(val === "connect") {
                          $out.append("gavin@localhost:~$ connect<br>");
                          $out.append("Specify a host and password to connect to.<br>");
