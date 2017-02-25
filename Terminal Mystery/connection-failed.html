@@ -6,9 +6,6 @@
     <title>Terminal Mystery - Connection Failed</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="author" content="Gavin Wainwright">
-    <meta name="description" content="description here">
-    <meta name="keywords" content="keywords,here">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="typed.js"></script>
@@ -45,6 +42,7 @@
                 } else
                     if (val === "exit") {
                     $out.append("login:~$ exit<br>");
+                    $out.append("Successfully exited.");
                     $out.append("Connecting to gavin@localhost");
                                           setTimeout(function() {
                         $out.append(".");
