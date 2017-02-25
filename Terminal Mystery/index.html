@@ -14,7 +14,8 @@
   </head>
   <body>
 
-    <div id="screen">Welcome to Terminal Mystery.
+    <div id="screen"><button type="button" onclick="changeTheme()">Change Theme</button>
+      <br>Welcome to Terminal Mystery.
       <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>
       <br>Original idea from Hacker's Quest
       <br>Type 'help' for a list of commands
@@ -23,6 +24,14 @@
     </div>
 
     <script>
+      function changeTheme() {
+        var theme = document.body.style.backgroundColor;
+        if(theme === "#222") {
+          document.body.style.backgroundColor = "white";
+        } else {
+            document.body.style.backgroundColor = "#222";
+        }
+     }
     var $out = $("#output");
     $("#screen input").focus();
     $("#screen input").on('keydown', function(event) {
