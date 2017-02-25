@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery.
+    <div id="screen">Welcome to Terminal Mystery...
         <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -73,7 +73,7 @@
                                            if(!cmds.includes(val)) {
                                                $out.append(`gavin@localhost:~$ ${val}<br>`);
                                                $out.append(`Could not find a file / message with the name of '${val.substring(5)}'.<br>`);
-                                           }
+                                           } else
                     if (val === "show need your help") {
                     $out.append("gavin@localhost:~$ show need your help<br>");
                    $out.append("Viewing the content of need your help:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by <br>connecting with the host: root<br>and the password: m4sk<br>");
@@ -90,7 +90,7 @@
                                            if(!cmds.includes(val)) {
                                                $out.append(`gavin@localhost:~$ ${val}<br>`);
                                                $out.append(`Login attempt failed. Incorrect host or password '${val.substring(8)}'.<br>`);
-                                           }
+                                           } else
                 if (val === "connect root m4sk") {
                     $out.append("gavin@localhost:~$ connect root m4sk<br>");
                         $out.append("Connecting");
