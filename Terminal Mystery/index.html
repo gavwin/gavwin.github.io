@@ -16,15 +16,13 @@
 
 <body>
 
-    <div class="element" id="screen">
+    <div id="screen">
         <div id="output"></div>
-        $&gt;
-        <input></input>
     </div>
     <script>
   $(function(){
-      $(".element").typed({
-        strings: ["Welcome to Terminal Mystery.<br>A command line mystery game created by <a href='https://github.com/gavwin'>Gavin Wainwright</a><br>Original idea from Hacker's Quest<br>Type 'help' for a list of commands"],
+      $("#screen").typed({
+        strings: ["Welcome to Terminal Mystery.<br>A command line mystery game created by <a href='https://github.com/gavwin'>Gavin Wainwright</a><br>Original idea from Hacker's Quest<br>Type 'help' for a list of commands<br><br>$&gt;<input></input>"],
         typeSpeed: 0
       });
   });
