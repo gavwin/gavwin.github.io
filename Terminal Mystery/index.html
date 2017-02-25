@@ -52,9 +52,16 @@
                     $out.append("$&gt; inbox<br>");
                     $out.append("Your Inbox:<br>↳ Messages:<br>favor");
                 } else
+                if (val === "connect root") {
+                    $out.append("$&gt; connect root<br>");
+                    $out.append("Password:<br>");
+                    if(val === "m4sk") {
+                        $out.append("Successfully established a connection to root@m4sk.<br>");
+                    }
+                } else
                 if (val === "show favor") {
                     $out.append("$&gt; show favor<br>");
-                    $out.append("Viewing the content of favor:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by connecting with the host:<br>root@mask<br>and the password:<br>m4sk<br>");
+                    $out.append("Viewing the content of favor:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by connecting with the host:<br>root<br>and the password:<br>m4sk<br>");
                 } else
                 if (val === "breach") {
                     $out.append("$&gt; breach<br>");
