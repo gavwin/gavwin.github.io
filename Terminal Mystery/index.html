@@ -52,12 +52,11 @@
                     $out.append("$&gt; inbox<br>");
                     $out.append("Your Inbox:<br>↳ Messages:<br>favor");
                 } else
-                if (val === "connect root") {
-                    $out.append("$&gt; connect root<br>");
-                    $out.append("Password:<br>");
-                    if(val === "m4sk") {
+                if (val === "connect root m4sk") {
+                    $out.append("$&gt; connect root m4sk<br>");
                         $out.append("Successfully established a connection to root@m4sk.<br>");
                     } else {
+                        $out.append(`$&gt; ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect password.<br>");   
                     }
                 } else
