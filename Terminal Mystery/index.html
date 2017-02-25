@@ -44,6 +44,10 @@
             "connect root m4sk",
             "show favor",
             ];
+        var m4skChance [
+            "https://gavwin.github.io/Terminal%Mystery/m4sk.html",
+            "https://gavwin.github.io/Terminal%Mystery/connection_failed.html",
+            ];
         var $out = $("#output");
         $("#screen input").focus();
         $("#screen input").on('keydown', function(event) {
@@ -83,7 +87,8 @@
                     setTimeout(function() {
                         $out.append(".<br>");
                     }, 5000);
-                    setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%Mystery/m4sk.html"; }, 5100);
+                    var m4skChanceFinal = m4skChance[Math.floor(Math.random() * m4skChance.length)];
+                    setTimeout(function() { window.location.href = m4skChanceFinal; }, 5100);
                     } else if(val !== "connect root m4sk" && !cmds.includes(val)) {
                         $out.append(`gavin@localhost:~$ ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect username or password.<br>");   
