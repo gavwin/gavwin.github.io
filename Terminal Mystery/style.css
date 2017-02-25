@@ -14,10 +14,10 @@ width:99%;
 margin:0.5% auto;
 }
 #screen{
-/*border:inset #555 4px;
+/*border:inset #555 4px;*/
 background:#222;
 /*border-radius*/
--webkit-border-radius:0.5em;
+/*-webkit-border-radius:0.5em;
    -moz-border-radius:0.5em;
         border-radius:0.5em;*/
     height:80%;
