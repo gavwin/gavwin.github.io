@@ -31,6 +31,9 @@
             if(val === "") {
               $out.append("$&gt;<br>");
             } else
+            if(val === "clear") {
+              $out.empty();
+            } else
             if(val === "breach") {
               $out.append("$&gt; breach<br>");
               $out.append("Breaching");
