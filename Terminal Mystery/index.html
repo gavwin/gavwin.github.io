@@ -15,7 +15,9 @@
   <body>
 
     <div id="screen">Welcome to Terminal Mystery.
-      <br>A command line mystery game created by Gavin Wainwright (i am toast)
+      <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>
+      <br>Original idea from Hacker's Quest
+      <br>Type 'help' for a list of commands
       <div id="output"></div>
        $&gt;<input></input>
     </div>
@@ -46,7 +48,7 @@
             } else
             if(val === "help") {
               $out.append("$&gt; help<br>");
-                $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>");
+                $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>clear - Clears the terminal<br>inbox - Shows your inbox<br>");
             }
             else {
               $out.append(`$&gt; ${val}<br>`);
