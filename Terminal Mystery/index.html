@@ -28,8 +28,8 @@
             var $this = $(this),
                 val = $this.val();
             $this.focus().val('');
-            if(val === "$&gt;") {
-              $out.append("<br>");
+            if(val === "") {
+              $out.append("$&gt;");
             } else
             if(val === "breach") {
               $out.append("$&gt; breach<br>");
