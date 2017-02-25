@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery..
+    <div id="screen">Welcome to Terminal Mystery.
         <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -86,7 +86,7 @@
                         $out.append("Specify a file / message to show.<br>");
                     }      
                 } else
-                    /*if(val.startsWith("connect")) {
+                    if(val.startsWith("connect")) {
                                            if(!cmds.includes(val)) {
                                                $out.append(`gavin@localhost:~$ ${val}<br>`);
                                                $out.append(`Login attempt failed. Incorrect host or password '${val.substring(8)}'.<br>`);
@@ -115,7 +115,7 @@
                         $out.append("gavin@localhost:~$ connect<br>");
                         $out.append("Specify a host and password to connect to.<br>");
                     }      
-                } else*/
+                } else
                 if (val === "breach") {
                     $out.append("gavin@localhost:~$ breach<br>");
                     $out.append("Breaching");
