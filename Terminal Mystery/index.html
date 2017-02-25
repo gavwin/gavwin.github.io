@@ -10,8 +10,8 @@
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="typed.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="typed.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,16 @@
         $&gt;
         <input></input>
     </div>
-
+<div class="element"></div>
+    <script>
+  $(function(){
+      $(".element").typed({
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 0
+      });
+  });
+</script>
+    
     <script>
         var $out = $("#output");
         $("#screen input").focus();
