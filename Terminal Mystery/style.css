@@ -14,6 +14,9 @@ height:99%;
 width:99%;
 margin:0.5% auto;
 }
+#wider {
+   width: 100px;  
+}
 #screen {
 /*border:inset #555 4px;*/
 background:#222;
