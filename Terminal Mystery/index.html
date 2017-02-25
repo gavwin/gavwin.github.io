@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery...
+    <div id="screen">Welcome to Terminal Mystery.
         <br>A command line mystery game created by <a href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -66,6 +66,10 @@
                     $out.append("gavin@localhost:~$ help<br>");
                     $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>clear - Clears the terminal<br>inbox - Shows your inbox<br>show - Shows the contents of a file or message<br>");
                 } else
+                                    if (val === "inbox") {
+                    $out.append("gavin@localhost:~$ inbox<br>");
+                    $out.append("Your Inbox:<br>↳ need your help<br>");
+                } else
                 if (val === "clear") {
                     $out.empty();
                 } else
@@ -73,7 +77,7 @@
                                            if(!cmds.includes(val)) {
                                                $out.append(`gavin@localhost:~$ ${val}<br>`);
                                                $out.append(`Could not find a file / message with the name of '${val.substring(5)}'.<br>`);
-                                           } else
+                                           }
                     if (val === "show need your help") {
                     $out.append("gavin@localhost:~$ show need your help<br>");
                    $out.append("Viewing the content of need your help:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by <br>connecting with the host: root<br>and the password: m4sk<br>");
@@ -81,10 +85,6 @@
                         $out.append("gavin@localhost:~$ show<br>");
                         $out.append("Specify a file / message to show.<br>");
                     }      
-                } else
-                if (val === "inbox") {
-                    $out.append("gavin@localhost:~$ inbox<br>");
-                    $out.append("Your Inbox:<br>↳ need your help<br>");
                 } else
                     if(val.startsWith("connect")) {
                                            if(!cmds.includes(val)) {
