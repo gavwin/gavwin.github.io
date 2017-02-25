@@ -44,25 +44,25 @@
                 $this.focus().val('');
                 if (val === "") {
                     $out.append("$&gt;<br>");
-                }
+                } else
                 if (val === "clear") {
                     $out.empty();
-                }
+                } else
                 if (val === "inbox") {
                     $out.append("$&gt; inbox<br>");
                     $out.append("Your Inbox:<br>↳ Messages:<br>favor");
-                }
+                } else
                 if (val === "connect root m4sk") {
                     $out.append("$&gt; connect root m4sk<br>");
                         $out.append("Successfully established a connection to root@m4sk.<br>");
                     } else {
                         $out.append(`$&gt; ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect username or password.<br>");   
-                    }
+                    } else
                 if (val === "show favor") {
                     $out.append("$&gt; show favor<br>");
                     $out.append("Viewing the content of favor:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by connecting with the host:<br>root<br>and the password:<br>m4sk<br>");
-                }
+                } else
                 if (val === "breach") {
                     $out.append("$&gt; breach<br>");
                     $out.append("Breaching");
@@ -84,7 +84,7 @@
                     setTimeout(function() {
                         $out.append("Successfully breached the firewall.<br>");
                     }, 6250);
-                }
+                } else
                 if (val === "help") {
                     $out.append("$&gt; help<br>");
                     $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>clear - Clears the terminal<br>inbox - Shows your inbox<br>show - Shows the contents of a file or message<br>");
