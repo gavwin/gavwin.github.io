@@ -57,7 +57,7 @@
                 $this.focus().val('');
                 if (val === "") {
                     $out.append("gavin@localhost:~$<br>");
-                } else
+                } /*else
                 if (val === "clear") {
                     $out.empty();
                 } else
@@ -87,19 +87,19 @@
                     setTimeout(function() {
                         $out.append(".<br>");
                     }, 5000);
-                    //var m4skChanceFinal = m4skChance[Math.floor(Math.random() * m4skChance.length)];
-                    //setTimeout(function() { window.location.href = m4skChanceFinal; }, 5100);
-                 /*   } else if(val !== "connect root m4sk" && !cmds.includes(val)) {
+                    var m4skChanceFinal = m4skChance[Math.floor(Math.random() * m4skChance.length)];
+                    setTimeout(function() { window.location.href = m4skChanceFinal; }, 5100);
+                    } else if(val !== "connect root m4sk" && !cmds.includes(val)) {
                         $out.append(`gavin@localhost:~$ ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect username or password.<br>");   
-                    } else*/
+                    } else
                 }  else    if (val === "help") {
                     $out.append("gavin@localhost:~$ help<br>");
                     $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>clear - Clears the terminal<br>inbox - Shows your inbox<br>show - Shows the contents of a file or message<br>");
                 } else {
                     $out.append(`gavin@localhost:~$ ${val}<br>`);
                     $out.append("Command not recognized.<br>");
-                }
+                }*/
                 $this.val('');
             }
         });
