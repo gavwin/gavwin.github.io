@@ -86,12 +86,12 @@
                          $out.append("Specify a file / message to show.<br>");
                      }
                  } else
-                 if (val.startsWith("connect")) {
+                /* if (val.startsWith("connect")) {
                      if (!cmds.includes(val)) {
                          $out.append(`gavin@localhost:~$ ${val}<br>`);
                          $out.append(`Login attempt failed. Incorrect host or password '${val.substring(8)}'.<br>`);
-                     } else
-                     /*if (val === "connect root m4sk") {
+                     } else*/
+                     if (val === "connect root m4sk") {
                          $out.append("gavin@localhost:~$ connect root m4sk<br>");
                          $out.append("Connecting");
                          setTimeout(function() {
@@ -117,7 +117,7 @@
                              $out.append("gavin@localhost:~$ connect<br>");
                              $out.append("Specify a host and password to connect to.<br>");
                          }
-                     } else*/
+                     } else
                      //else 
                  {
                          $out.append(`gavin@localhost:~$ ${val}<br>`);
