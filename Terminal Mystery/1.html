@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Mystery</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="author" content="Gavin Wainwright">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="typed.js"></script>
+</head>
+
+<body>
+
+    <div id="screen">Type 'help' for a list of commands.
+        <div id="output"></div>
+        <br>gavin@localhost:~$
+        <input class="wider"></input>
+    </div>
+<!--<div class="element"></div>
+    <script>
+  $(function(){
+      $(".element").typed({
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 0
+      });
+  });
+</script>-->
+    
+    <script>
+ var cmds = [
+     "",
+     "help",
+     "clear",
+     "concept",
+     "inbox",
+     "show",
+     "show need your help",
+     "show good job",
+     "connect",
+     "connect root m4sk",
+ ];
+ var m4skChance = [
+     "https://gavwin.github.io/Terminal%20Mystery/m4sk.html",
+     "https://gavwin.github.io/Terminal%20Mystery/connection-failed.html",
+ ];
+ var $out = $("#output");
+ $("#screen input").focus();
+ $("#screen input").on("keydown", function(event) {
+             if (event.which === 13) { // Enter key pressed
+                 var $this = $(this),
+                     val = $this.val();
+                 $this.focus().val("");
+                 if (val === "") {
+                     $out.append("gavin@localhost:~$<br>");
+                 } else
+                 if (val === "help") {
+                     $out.append("gavin@localhost:~$ help<br>");
+                     $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>inbox - Shows your inbox<br>show [file|message] - Shows the contents of a file or message<br>connect [host] [password] - Connects to the specified host.<br>clear - Clears the terminal<br>");
+                 } else
+                 if (val === "inbox") {
+                     $out.append("gavin@localhost:~$ inbox<br>");
+                     $out.append("Your Inbox:<br>↳ need your help<br>↳ good job<br>");
+                 } else
+                 if (val === "clear") {
+                     $out.empty();
+                 } else
+                 if (val.startsWith("show")) {
+                     if (!cmds.includes(val)) {
+                         $out.append(`gavin@localhost:~$ ${val}<br>`);
+                         $out.append(`Could not find a file / message with the name of '${val.substring(5)}'.<br>`);
+                     }
+                     if (val === "show need your help") {
+                         $out.append("gavin@localhost:~$ show need your help<br>");
+                         $out.append("Viewing the content of need your help:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by <br>connecting with the host: root<br>and the password: m4sk<br>");
+                     } 
+                     if (val === "show good job") {
+                         $out.append("gavin@localhost:~$ show good job<br>");
+                         $out.append("Viewing the content of good job:<br>Dear Gavin,<br>    Great job getting into one of M.A.S.K.'s computers. We now know what they plan<br>and with some more evidence we can completley trump their mission.<br>You can try rooting around on their computer more, try finding any other files that could give us more information.<br>Best of luck,<br>Mike<br>");
+                     }
+                     else if (val === "show") {
+                         $out.append("gavin@localhost:~$ show<br>");
+                         $out.append("Specify a file / message to show.<br>");
+                     }
+                 } else
+                     if(val.startsWith("connect")) {
+                       if(val === "connect root m4sk") {
+                         var m4skRandom = m4skChance[Math.floor(Math.random() * m4skChance.length)];
+                         $out.append("gavin@localhost:~$ connect root m4sk<br>");
+                         $out.append("Connecting");
+                         setTimeout(function() { $out.append("."); }, 1000);
+                         setTimeout(function() { $out.append("."); }, 2000);
+                         setTimeout(function() { $out.append("."); }, 3000);
+                         setTimeout(function() { $out.append("."); }, 4000);
+                         setTimeout(function() { $out.append("."); }, 5000);
+                         setTimeout(function() { window.location.href = m4skRandom; }, 5100);
+                       } else if(val === "connect") {
+                         $out.append("gavin@localhost:~$ connect<br>");
+                         $out.append("Specify a host and password to connect to.<br>");
+                       } else if(!cmds.includes(val)) {
+                         $out.append(`gavin@localhost:~$ ${val.substring(8)}<br>`);
+                         $out.append(`Failed to connect. Incorrect host and/or password.<br>`);
+                       }
+                     } else {
+                       $out.append(`gavin@localhost:~$ ${val}<br>`);
+                       $out.append("Command not recognized.<br>");
+                     }
+                     $this.val("");
+                 }
+             });
+    </script>
+
+</body>
+
+</html>
