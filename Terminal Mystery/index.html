@@ -55,7 +55,7 @@
                 if (val === "connect root m4sk") {
                     $out.append("$&gt; connect root m4sk<br>");
                         $out.append("Successfully established a connection to root@m4sk.<br>");
-                    } else {
+                    } else if(val !== "connect root m4sk") {
                         $out.append(`$&gt; ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect username or password.<br>");   
                     } else
