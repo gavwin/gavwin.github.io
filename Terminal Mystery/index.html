@@ -93,28 +93,6 @@
                         $out.append(`gavin@localhost:~$ ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect username or password.<br>");   
                     } else
-                if (val === "breach") {
-                    $out.append("gavin@localhost:~$ breach<br>");
-                    $out.append("Breaching");
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 1000);
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 2000);
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 3000);
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 4000);
-                    setTimeout(function() {
-                        $out.append(".<br>");
-                    }, 5000);
-                    setTimeout(function() {
-                        $out.append("Successfully breached the firewall.<br>");
-                    }, 6250);
-                } else
                 if (val === "help") {
                     $out.append("gavin@localhost:~$ help<br>");
                     $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>clear - Clears the terminal<br>inbox - Shows your inbox<br>show - Shows the contents of a file or message<br>");
