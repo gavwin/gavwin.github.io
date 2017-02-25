@@ -35,6 +35,15 @@
 </script>-->
     
     <script>
+        var cmds = [
+            "",
+            "help",
+            "inbox",
+            "show",
+            "clear",
+            "connect root m4sk",
+            "show favor",
+            ];
         var $out = $("#output");
         $("#screen input").focus();
         $("#screen input").on('keydown', function(event) {
@@ -55,7 +64,7 @@
                 if (val === "connect root m4sk") {
                     $out.append("$&gt; connect root m4sk<br>");
                         $out.append("Successfully established a connection to root@m4sk.<br>");
-                    } else if(val !== "connect root m4sk") {
+                    } else if(val !== "connect root m4sk" && !cmds.includes(val)) {
                         $out.append(`$&gt; ${val}<br>`);
                         $out.append("Login attempt failed. Incorrect username or password.<br>");   
                     } else
