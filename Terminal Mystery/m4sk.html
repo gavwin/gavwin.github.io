@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>Terminal Mystery - M.A.S.K.</title>
@@ -59,14 +57,14 @@
                 if (val === "") {
                     $out.append("gavin@localhost:~$<br>");
                 } else
-                                    if (val === "help") {
+                  if (val === "help") {
                     $out.append("gavin@localhost:~$ help<br>");
                     $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>inbox - Shows your inbox<br>show <file> - Shows the contents of a file or message<br>clear - Clears your terminal<br>");
                 } else
                 if (val === "clear") {
                     $out.empty();
                 } else
-                                    if (val === "inbox") {
+                  if (val === "inbox") {
                     $out.append("gavin@localhost:~$ inbox<br>");
                     $out.append("Your Inbox:<br>↳ need your help");
                 } else
@@ -78,6 +76,7 @@
                                                 $out.append(`gavin@localhost:~$ ${val}<br>`);
                         $out.append("Couldn't find a file / message with the name ${val.substring(2)}.<br>");   
                     }
+                    } else
                     if (val === "show need your help") {
                     $out.append("gavin@localhost:~$ show favor<br>");
                     $out.append("Viewing the content of favor:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by <br>connecting with the host: root<br>and the password: m4sk<br>");
