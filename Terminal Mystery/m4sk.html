@@ -32,85 +32,67 @@
 </script>-->
     
     <script>
-        var cmds = [
-            "",
-            "help",
-            "inbox",
-            "show",
-            "clear",
-            "connect root m4sk",
-            "show favor",
-            ];
-        
-        var m4skChance = [
-            "https://gavwin.github.io/Terminal%20Mystery/m4sk.html",
-            "https://gavwin.github.io/Terminal%20Mystery/connection-failed.html",
-            ];
-        
-        var $out = $("#output");
-        $("#screen input").focus();
-        $("#screen input").on('keydown', function(event) {
-            if (event.which === 13) { // Enter key pressed
-                var $this = $(this),
-                    val = $this.val();
-                $this.focus().val('');
-                if (val === "") {
-                    $out.append("gavin@localhost:~$<br>");
-                } else
-                  if (val === "help") {
-                    $out.append("gavin@localhost:~$ help<br>");
-                    $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>inbox - Shows your inbox<br>show <file> - Shows the contents of a file or message<br>clear - Clears your terminal<br>");
-                } else
-                if (val === "clear") {
-                    $out.empty();
-                } else
-                  if (val === "inbox") {
-                    $out.append("gavin@localhost:~$ inbox<br>");
-                    $out.append("Your Inbox:<br>↳ need your help");
-                } else
-                    if(val.startsWith("show")) {
-                        if(val === "show") {
-                        $out.append("gavin@localhost:~$ show<br>");
-                        $out.append("Specify a file / message to show.<br>");   
-                    } else if(val !== "show" && !cmds.includes(val)) {
-                                                $out.append(`gavin@localhost:~$ ${val}<br>`);
-                        $out.append("Couldn't find a file / message with the name ${val.substring(2)}.<br>");   
-                    }
-                    } else
-                    if (val === "show need your help") {
-                    $out.append("gavin@localhost:~$ show favor<br>");
-                    $out.append("Viewing the content of favor:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by <br>connecting with the host: root<br>and the password: m4sk<br>");
-                } else
-                if (val === "connect root m4sk") {
-                    $out.append("gavin@localhost:~$ connect root m4sk<br>");
-                        $out.append("Connecting");
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 1000);
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 2000);
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 3000);
-                    setTimeout(function() {
-                        $out.append(".");
-                    }, 4000);
-                    setTimeout(function() {
-                        $out.append(".<br>");
-                    }, 5000);
-                    var m4skRandom = m4skChance[Math.floor(Math.random()*m4skChance.length)];
-                    setTimeout(function() { window.location.href = m4skRandom}, 5100);
-                    } else if(val !== "connect root m4sk" && !cmds.includes(val)) {
-                        $out.append(`gavin@localhost:~$ ${val}<br>`);
-                        $out.append("Login attempt failed. Incorrect username or password.<br>");   
-                    } else {
-                    $out.append(`gavin@localhost:~$ ${val}<br>`);
-                    $out.append("Command not recognized.<br>");
-                }
-                $this.val('');
-            }
-        });
+  var cmds = [
+     "",
+     "help",
+     "clear",
+     "inbox",
+     "show",
+     "show its time",
+     "exit",
+ ];
+
+ var $out = $("#output");
+ $("#screen input").focus();
+ $("#screen input").on("keydown", function(event) {
+             if (event.which === 13) { // Enter key pressed
+                 var $this = $(this),
+                     val = $this.val();
+                 $this.focus().val("");
+                 if (val === "") {
+                     $out.append("root@m4sk:~$<br>");
+                 } else
+                 if (val === "help") {
+                     $out.append("root@m4sk:~$ help<br>");
+                     $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>inbox - Shows your inbox<br>show [file|message] - Shows the contents of a file or message<br>connect [host] [password] - Connects to the specified host.<br>clear - Clears the terminal<br>");
+                 } else
+                 if (val === "inbox") {
+                     $out.append("root@m4sk:~$ inbox<br>");
+                     $out.append("Your Inbox:<br>↳ its time<br>");
+                 } else
+                 if (val === "clear") {
+                     $out.empty();
+                 } else
+                 if (val.startsWith("show")) {
+                     if (!cmds.includes(val)) {
+                         $out.append(`root@m4sk:~$ ${val}<br>`);
+                         $out.append(`Could not find a file / message with the name of '${val.substring(5)}'.<br>`);
+                     }
+                     if (val === "show its time") {
+                         $out.append("root@m4sk:~$ show need your help<br>");
+                         $out.append("Viewing the content of need your help:<br>To all M.A.S.K. members,<br>    In exactly 24 hours of this message being sent out, it will be time<br>to take action against the Peruvian Government as planned.<br>This mission has to be our best, as we all know the poor results of what happened last time.<br> - Shadow<br>");
+                     } else if (val === "show") {
+                         $out.append("root@m4sk:~$ show<br>");
+                         $out.append("Specify a file / message to show.<br>");
+                     }
+                 } else
+                       if(val === "exit") {
+                         $out.append("root@m4sk:~$ exit<br>");
+                         $out.append("Successfully exited.<br>");
+                         $out.append("Connecting");
+                         setTimeout(function() { $out.append("."); }, 1000);
+                         setTimeout(function() { $out.append("."); }, 2000);
+                         setTimeout(function() { $out.append("."); }, 3000);
+                         setTimeout(function() { $out.append("."); }, 4000);
+                         setTimeout(function() { $out.append("."); }, 5000);
+                         setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%20Mystery/1"; }, 5100);
+                     } else {
+                       $out.append(`gavin@localhost:~$ ${val}<br>`);
+                       $out.append("Command not recognized.<br>");
+                     }
+                     $this.val("");
+                 }
+             });
     </script>
 
 </body>
