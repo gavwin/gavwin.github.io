@@ -14,7 +14,7 @@ height:99%;
 width:99%;
 margin:0.5% auto;
 }
-#screen{
+#screen, .type {
 /*border:inset #555 4px;*/
 background:#222;
 /*border-radius*/
