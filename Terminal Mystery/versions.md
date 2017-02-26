@@ -1,1 +1,1 @@
-# Stable Version: latest (0.4.5)
+# Stable Version: latest (1.0.3)
