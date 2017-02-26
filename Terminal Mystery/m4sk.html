@@ -38,7 +38,7 @@
      "clear",
      "inbox",
      "show",
-     "show its time",
+     "show it's time",
      "exit",
  ];
 
@@ -58,7 +58,7 @@
                  } else
                  if (val === "inbox") {
                      $out.append("root@m4sk:~$ inbox<br>");
-                     $out.append("Your Inbox:<br>↳ its time<br>");
+                     $out.append("Your Inbox:<br>↳ it's time<br>");
                  } else
                  if (val === "clear") {
                      $out.empty();
@@ -68,9 +68,9 @@
                          $out.append(`root@m4sk:~$ ${val}<br>`);
                          $out.append(`Could not find a file / message with the name of ${val.substring(5)}.<br>`);
                      }
-                     if (val === "show its time") {
-                         $out.append("root@m4sk:~$ show its time<br>");
-                         $out.append("Viewing the content of its time:<br>To all M.A.S.K. members,<br>    In exactly 24 hours of this message being sent out, it will be time<br>to take action against the Peruvian Government as planned.<br>This mission has to be our best, as we all know the poor results of what happened last time.<br> - Shadow<br>");
+                     if (val === "show it's time") {
+                         $out.append("root@m4sk:~$ show it's time<br>");
+                         $out.append("Viewing the content of it's time:<br>To all M.A.S.K. members,<br>    In exactly 24 hours of this message being sent out, it will be time<br>to take action against the Peruvian Government as planned.<br>This mission has to be our best, as we all know the poor results of what happened last time.<br> - Shadow<br>");
                      } else if (val === "show") {
                          $out.append("root@m4sk:~$ show<br>");
                          $out.append("Specify a file / message to show.<br>");
