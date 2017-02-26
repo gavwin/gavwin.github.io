@@ -38,8 +38,8 @@
      "clear",
      "inbox",
      "show",
-     "show its time",
-     "show plans/peru",
+     "show it's time",
+     "show peru",
      "exit",
      "ls",
  ];
@@ -64,7 +64,7 @@
                  } else
                  if (val === "inbox") {
                      $out.append("root@m4sk:~$ inbox<br>");
-                     $out.append("Your Inbox:<br>↳ its time<br>");
+                     $out.append("Your Inbox:<br>↳ it's time<br>");
                  } else
                  if (val === "clear") {
                      $out.empty();
@@ -74,13 +74,13 @@
                          $out.append(`root@m4sk:~$ ${val}<br>`);
                          $out.append(`Could not find a file / message with the name of ${val.substring(5)}.<br>`);
                      }
-                     if (val === "show plans/peru") {
-                         $out.append("root@m4sk:~$ show plans/peru<br>");
+                     if (val === "show peru") {
+                         $out.append("root@m4sk:~$ show peru<br>");
                          $out.append("Viewing the content of peru:<br>Objective: Preform a wave of cyber and physical attacks on the Peruvian Government to shut them down.<br>1. Sam goes in from the west side to steal the asset.<br>2. Shadow and the rest of the hacker squad begin the cyber attack.<br>3. Slade and the rest of the attack squad go in and attack. (This draws all government agents).<br>4. Shut down the watchdog system and kidnap Watson.<br>5. Get ransoms from the weakened Peruvian Government in return for Watson.<br>6. A.C.R.O.S.T.I.C.<br>");
                      } else
-                     if (val === "show its time") {
-                         $out.append("root@m4sk:~$ show its time<br>");
-                         $out.append("Viewing the content of its time:<br>To all M.A.S.K. members,<br>    In exactly 24 hours of this message being sent out, it will be time<br>to take action against the Peruvian Government as planned.<br>This mission has to be our best, as we all know the poor results of what happened last time.<br> - Shadow<br>");
+                     if (val === "show it's time") {
+                         $out.append("root@m4sk:~$ show it's time<br>");
+                         $out.append("Viewing the content of it's time:<br>To all M.A.S.K. members,<br>    In exactly 24 hours of this message being sent out, it will be time<br>to take action against the Peruvian Government as planned.<br>This mission has to be our best, as we all know the poor results of what happened last time.<br> - Shadow<br>");
                      } else if (val === "show") {
                          $out.append("root@m4sk:~$ show<br>");
                          $out.append("Specify a file / message to show.<br>");
