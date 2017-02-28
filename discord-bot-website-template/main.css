@@ -10,7 +10,14 @@ color: #87A5FF;
 }
 
 footer {
+  position: relative;
+}
+
+.bottom {
+  position: fixed;
   bottom: 0;
+  width:100%;
+  text-align: center 
 }
 
 .botTag {
