@@ -64,32 +64,32 @@
                      $out.append("gavin@localhost:~$ help<br>");
                      $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>concept - Explains how to play this game<br>inbox - Shows your inbox<br>show [file|message] - Shows the contents of a file or message<br>connect [host] [password] - Connects to the specified host.<br>clear - Clears the terminal<br>");
                  } else
-                 if (val === "inbox") {
+                 if (val.toLowerCase() === "inbox") {
                      $out.append("gavin@localhost:~$ inbox<br>");
                      $out.append("Your Inbox:<br>↳ need your help<br>");
                  } else
-                 if (val === "concept") {
+                 if (val.toLowerCase() === "concept") {
                      $out.append("gavin@localhost:~$ concept<br>");
                      $out.append("How this game works:<br>In this game, you are to navigate through the terminal / command line to find files, messages and more <br>in order to shut down terrorist groups, espionages and hackers from doing bad.<br>Start by running the command 'help'<br>");
                  } else
-                 if (val === "clear") {
+                 if (val.toLowerCase() === "clear") {
                      $out.empty();
                  } else
-                 if (val.startsWith("show")) {
-                     if (!cmds.includes(val)) {
+                 if (val.toLowerCase().startsWith("show")) {
+                     if (!cmds.includes(val.toLowerCase())) {
                          $out.append(`gavin@localhost:~$ ${val}<br>`);
                          $out.append(`Could not find a file / message with the name of '${val.substring(5)}'.<br>`);
                      }
-                     if (val === "show need your help") {
+                     if (val.toLowerCase() === "show need your help") {
                          $out.append("gavin@localhost:~$ show need your help<br>");
                          $out.append("Viewing the content of need your help:<br>Dear Gavin,<br>    For the past month or so I've been keeping an eye on a group of cyber<br>terrorists who call themselves, M.A.S.K.  (Mobile Armored Strike Kommand).<br>Your hacking skills are needed to take down this skulking espionage,<br>so get as much information on the group as you can.<br>Best of Luck,<br>Mike<br>P.S. You can gain access to one of their computers by <br>connecting with the host: root<br>and the password: m4sk<br>");
-                     } else if (val === "show") {
+                     } else if (val.toLowerCase() === "show") {
                          $out.append("gavin@localhost:~$ show<br>");
                          $out.append("Specify a file / message to show.<br>");
                      }
                  } else
-                     if(val.startsWith("connect")) {
-                       if(val === "connect root m4sk") {
+                     if(val.toLowerCase().startsWith("connect")) {
+                       if(val.toLowerCase() === "connect root m4sk") {
                          var m4skRandom = m4skChance[Math.floor(Math.random() * m4skChance.length)];
                          $out.append("gavin@localhost:~$ connect root m4sk<br>");
                          $out.append("Connecting");
@@ -99,7 +99,7 @@
                          setTimeout(function() { $out.append("."); }, 4000);
                          setTimeout(function() { $out.append("."); }, 5000);
                          setTimeout(function() { window.location.href = m4skRandom; }, 5100);
-                       } else if(val === "connect") {
+                       } else if(val.toLowerCase() === "connect") {
                          $out.append("gavin@localhost:~$ connect<br>");
                          $out.append("Specify a host and password to connect to.<br>");
                        } else if(!cmds.includes(val)) {
