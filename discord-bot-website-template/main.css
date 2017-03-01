@@ -2,6 +2,7 @@ body {
 font-family: 'Roboto', sans-serif;
 background-color: #2E3136;
 color: #E4801E;
+position: relative;
 }
 
 a {
