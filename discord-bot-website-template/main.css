@@ -23,5 +23,7 @@ color: #87A5FF;
 }
 
 .circular {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
