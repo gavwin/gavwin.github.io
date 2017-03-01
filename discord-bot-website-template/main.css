@@ -2,12 +2,15 @@ body {
 font-family: 'Roboto', sans-serif;
 background-color: #2E3136;
 color: #E4801E;
-position: relative;
 }
 
 a {
 text-decoration: none;
 color: #87A5FF;
+}
+
+.footerDiv {
+ position: relative; 
 }
 
 .footer {
