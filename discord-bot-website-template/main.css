@@ -29,7 +29,7 @@ color: #87A5FF;
   border-radius: 50%;
 }
 
-#container{width:100%;}
-#left{float:left;width:100px;}
-#right{float:right;width:100px;}
-#center{margin:0 auto;width:100px;}
+#container{display:inline-block;}
+#left{display:inline-block;}
+#right{display:inline-block;}
+#center{display:inline-block;}
