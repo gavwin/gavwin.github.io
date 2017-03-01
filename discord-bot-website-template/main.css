@@ -24,12 +24,11 @@ color: #87A5FF;
 }
 
 .circular {
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 
-#container{display:inline-block;}
-#left{display:inline-block;}
-#right{display:inline-block;}
-#center{display:inline-block;}
+#left{float:left;}
+#right{float:left;}
+#center{float:left;}
