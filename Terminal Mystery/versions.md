@@ -1,1 +1,3 @@
-# Stable Version: latest (1.0.4)
+# Stable Version: v1.1.7
+# Latest Version: v1.1.7
+# Running Version: v1.1.7
