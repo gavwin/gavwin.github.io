@@ -77,21 +77,22 @@
                          $out.append("Specify a file / message to show.<br>");
                      }
                  } else
-                     if(val.startsWith("connect")) {
-                       if(val === "connect root m4sk") {
-                         $out.append("gavin@localhost:~$ connect root m4sk<br>");
+                    if(val.startsWith("connect")) {
+                       if(valArgs === "connect root m4sk" || valArgs === "Connect root m4sk") {
+                         var m4skRandom = m4skChance[Math.floor(Math.random() * m4skChance.length)];
+                         $out.append(said);
                          $out.append("Connecting");
                          setTimeout(function() { $out.append("."); }, 1000);
                          setTimeout(function() { $out.append("."); }, 2000);
                          setTimeout(function() { $out.append("."); }, 3000);
                          setTimeout(function() { $out.append("."); }, 4000);
                          setTimeout(function() { $out.append("."); }, 5000);
-                         setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%20Mystery/m4sk1"; }, 5100);
+                         setTimeout(function() { window.location.href = m4skRandom; }, 5100);
                        } else if(val === "connect") {
-                         $out.append("gavin@localhost:~$ connect<br>");
+                         $out.append(said);
                          $out.append("Specify a host and password to connect to.<br>");
-                       } else if(!cmds.includes(val)) {
-                         $out.append(`gavin@localhost:~$ ${val.substring(8)}<br>`);
+                       } else if(valArgs !== "connect root m4sk" || valArgs !== "Connect root m4sk") {
+                         $out.append(said);
                          $out.append(`Failed to connect. Incorrect host and/or password.<br>`);
                        }
                      } else {
