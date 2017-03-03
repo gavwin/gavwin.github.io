@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.25) (latest)
+    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.2) (latest)
         <br>A command line mystery game created by <a target="_blank" href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a target="_blank" href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -55,9 +55,9 @@
  $("#screen input").on("keydown", function(event) {
              if (event.which === 13) {
                  var $this = $(this),
-                     val = $this.val().toLowerCase();
+                     valArgs = $this.val();
                  $this.focus().val("");
-                 var valArgs = $this.val();
+                 var val = valArgs.toLowerCase();
                  var said = `gavin@localhost:~$ ${valArgs}<br>`;
                  
                  if (val === "") {
