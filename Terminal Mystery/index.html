@@ -16,7 +16,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.0) (latest)
+    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.1) (latest)
         <br>A command line mystery game created by <a target="_blank" href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a target="_blank" href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -91,7 +91,7 @@
                      }
                  } else
                      if(val.startsWith("connect")) {
-                       if(val === "connect root m4sk") {
+                       if(valArgs === "connect root m4sk") {
                          var m4skRandom = m4skChance[Math.floor(Math.random() * m4skChance.length)];
                          $out.append(said);
                          $out.append("Connecting");
