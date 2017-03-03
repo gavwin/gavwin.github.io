@@ -25,13 +25,17 @@
         $("#screen input").on('keydown', function(event) {
             if (event.which === 13) { // Enter key pressed
                 var $this = $(this),
-                    val = $this.val();
+                    valArgs = $this.val();
                 $this.focus().val('');
+                var val = valArgs.toLowerCase();
+                function cmdUse() {
+                    $out.append(`login:~$ ${val}<br>`);   
+                }
                 if (val === "") {
                     $out.append("login:~$<br>");
                 } else
                     if (val === "exit") {
-                    $out.append("login:~$ exit<br>");
+                    cmdUse();
                     $out.append("Successfully exited.<br>");
                     $out.append("Connecting to gavin@localhost");
                                           setTimeout(function() {
@@ -51,7 +55,7 @@
                     }, 5000);
                     setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%20Mystery/"; }, 5100);
                     } else {
-                    $out.append(`login:~$ ${val}<br>`);
+                    cmdUse();
                     $out.append("Command not recognized.<br>");
                 }
                 $this.val('');
