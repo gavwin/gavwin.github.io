@@ -41,18 +41,21 @@
                 var $this = $(this),
                      valArgs = $this.val();
                  $this.focus().val("");
+                 
                  var val = valArgs.toLowerCase();
-                 var said = `gavin@localhost:~$ ${valArgs}<br>`;
+                 function cmdUsed() {
+                  $out.append(`gavin@localhost:~$ ${valArgs}<br>`);
+                 }
                  
                  if (val === "") {
                      $out.append("root@m4sk:~$<br>");
                  } else
                  if (val === "help") {
-                     $out.append(said);
+                     cmdUsed();
                      $out.append("Here's a list of commands:<br>help - Sends a list of commands<br>inbox - Shows your inbox<br>show [file|message] - Shows the contents of a file or message<br>exit - Exits and connects you back to gavin@localhost.<br>clear - Clears the terminal<br>");
                  } else
                  if (val === "inbox") {
-                     $out.append(said);
+                     cmdUsed();
                      $out.append("Your Inbox:<br>↳ it's time<br>");
                  } else
                  if (val === "clear") {
@@ -60,21 +63,24 @@
                  } else
                  if (val.startsWith("show")) {
                      if (!cmds.includes(val)) {
-                         $out.append(said);
+                         cmdUsed();
                          $out.append(`Could not find a file / message with the name of ${val.substring(5)}.<br>`);
                      }
                      if (val === "show it's time") {
                          cmdsUsed.push("show it's time");
-                         $out.append(said);
+                         cmdUsed();
                          $out.append("Viewing the content of it's time:<br>To all M.A.S.K. members,<br>    In exactly 24 hours of this message being sent out, it will be time<br>to take action against the Peruvian Government as planned.<br>This mission has to be our best, as we all know the poor results of what happened last time.<br> - Shadow<br>");
                      } else if (val === "show") {
-                         $out.append(said);
+                         cmdUsed();
                          $out.append("Specify a file / message to show.<br>");
                      }
                  } else
                        if(val === "exit") {
-                         if(!cmdsUsed.includes("show it's time")) { $out.append(said); return $out.append("Try looking around on this computer some more before exiting."); } else {
-                         $out.append(said);
+                         if(!cmdsUsed.includes("show it's time")) {
+                             cmdUsed();
+                             $out.append("Try looking around on this computer some more before exiting.<br>"); 
+                         } else {
+                         cmdUsed();
                          $out.append("Successfully exited.<br>");
                          $out.append("Connecting");
                          setTimeout(function() { $out.append("."); }, 1000);
@@ -85,7 +91,7 @@
                          setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%20Mystery/1"; }, 5100);
                      }
                        } else {
-                       $out.append(said);
+                       cmdUsed();
                        $out.append("Command not recognized.<br>");
                      }
                      $this.val("");
