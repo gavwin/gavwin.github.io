@@ -53,12 +53,13 @@
  var $out = $("#output");
  $("#screen input").focus();
  $("#screen input").on("keydown", function(event) {
-             if (event.which === 13) { // Enter key pressed
+             if (event.which === 13) {
                  var $this = $(this),
                      val = $this.val().toLowerCase();
                  $this.focus().val("");
                  var valArgs = $this.val();
                  var said = `gavin@localhost:~$ ${valArgs}<br>`;
+                 
                  if (val === "") {
                      $out.append("gavin@localhost:~$<br>");
                  } else
@@ -91,7 +92,7 @@
                      }
                  } else
                      if(val.startsWith("connect")) {
-                       if(valArgs === "connect root m4sk") {
+                       if(valArgs === "connect root m4sk" || valArgs === "Connect root m4sk") {
                          var m4skRandom = m4skChance[Math.floor(Math.random() * m4skChance.length)];
                          $out.append(said);
                          $out.append("Connecting");
