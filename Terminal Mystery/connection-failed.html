@@ -23,7 +23,7 @@
         var $out = $("#output");
         $("#screen input").focus();
         $("#screen input").on('keydown', function(event) {
-            if (event.which === 13) { // Enter key pressed
+            if (event.which === 13) {
                 var $this = $(this),
                     valArgs = $this.val();
                 $this.focus().val('');
