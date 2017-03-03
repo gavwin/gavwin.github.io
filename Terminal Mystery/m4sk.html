@@ -20,15 +20,6 @@
         <br>root@m4sk:~$
         <input></input>
     </div>
-<!--<div class="element"></div>
-    <script>
-  $(function(){
-      $(".element").typed({
-        strings: ["First sentence.", "Second sentence."],
-        typeSpeed: 0
-      });
-  });
-</script>-->
     
     <script>
   var cmds = [
@@ -47,11 +38,12 @@
  $("#screen input").focus();
  $("#screen input").on("keydown", function(event) {
              if (event.which === 13) { // Enter key pressed
-                 var $this = $(this),
-                     val = $this.val();
+                var $this = $(this),
+                     valArgs = $this.val();
                  $this.focus().val("");
-                 var valArgs = $this.val();
-                 var said = `root@m4sk:~$ ${valArgs}<br>`;
+                 var val = valArgs.toLowerCase();
+                 var said = `gavin@localhost:~$ ${valArgs}<br>`;
+                 
                  if (val === "") {
                      $out.append("root@m4sk:~$<br>");
                  } else
