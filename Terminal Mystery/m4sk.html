@@ -82,7 +82,7 @@
                      }
                  } else
                        if(val === "exit") {
-                         if(!cmdsUsed.includes("show it's time")) { $out.append(said); $out.append("Try looking around on this computer some more before exiting."); }
+                         if(!cmdsUsed.includes("show it's time")) { $out.append(said); return $out.append("Try looking around on this computer some more before exiting."); } else {
                          $out.append(said);
                          $out.append("Successfully exited.<br>");
                          $out.append("Connecting");
@@ -92,7 +92,8 @@
                          setTimeout(function() { $out.append("."); }, 4000);
                          setTimeout(function() { $out.append("."); }, 5000);
                          setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%20Mystery/1"; }, 5100);
-                     } else {
+                     }
+                       } else {
                        $out.append(said);
                        $out.append("Command not recognized.<br>");
                      }
