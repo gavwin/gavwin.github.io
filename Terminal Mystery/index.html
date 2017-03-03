@@ -15,7 +15,7 @@
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.4) (latest)
+    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.45) (latest)
         <br>A command line mystery game created by <a target="_blank" href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a target="_blank" href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
@@ -95,7 +95,7 @@
                        } else if(val === "connect") {
                          $out.append(said);
                          $out.append("Specify a host and password to connect to.<br>");
-                       } else if(!cmds.includes(val)) {
+                       } else if(valArgs !== "connect root m4sk" || valArgs !== "Connect root m4sk") {
                          $out.append(said);
                          $out.append(`Failed to connect. Incorrect host and/or password.<br>`);
                        }
