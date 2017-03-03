@@ -41,6 +41,8 @@
      "show it's time",
      "exit",
  ];
+        
+    var cmdsUsed = [];
 
  var $out = $("#output");
  $("#screen input").focus();
@@ -71,6 +73,7 @@
                          $out.append(`Could not find a file / message with the name of ${val.substring(5)}.<br>`);
                      }
                      if (val === "show it's time") {
+                         cmdsUsed.push("show it's time");
                          $out.append(said);
                          $out.append("Viewing the content of it's time:<br>To all M.A.S.K. members,<br>    In exactly 24 hours of this message being sent out, it will be time<br>to take action against the Peruvian Government as planned.<br>This mission has to be our best, as we all know the poor results of what happened last time.<br> - Shadow<br>");
                      } else if (val === "show") {
@@ -79,6 +82,7 @@
                      }
                  } else
                        if(val === "exit") {
+                         if(!cmdsUsed.includes("show it's time")) { $out.append(said); $out.append("Try looking around on this computer some more before exiting."); }
                          $out.append(said);
                          $out.append("Successfully exited.<br>");
                          $out.append("Connecting");
