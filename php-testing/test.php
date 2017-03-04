@@ -7,7 +7,7 @@
   <?php
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
-    echo "First Name: " . $firstName . "</br>Last Name: " . $lastName;
+    echo "<p>First Name: " . $firstName . "</br>Last Name: " . $lastName . "</p>";
   ?>
   </body>
 </html>
