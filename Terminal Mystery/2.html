@@ -42,9 +42,9 @@
                  var $this = $(this),
                      valArgs = $this.val();
                  $this.focus().val("");
-                 var val = valArs.toLowerCase();
+                 var val = valArgs.toLowerCase();
                  function cmdUse() {
-                     $out.append(`gavin@localhost:~$ ${val}<br>`);
+                  $out.append(`gavin@localhost:~$ ${valArgs}<br>`);   
                  }
                  if (val === "") {
                      $out.append("gavin@localhost:~$<br>");
