@@ -11,14 +11,24 @@
     <meta name="keywords" content="keywords,here">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style>
+        .blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+    </style>
 </head>
 
 <body>
 
-    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.7)
+    <div id="screen">Welcome to Terminal Mystery.&nbsp;&nbsp;&nbsp;&nbsp;(v1.1.75)
         <br>A command line mystery game created by <a target="_blank" href="https://github.com/gavwin">Gavin Wainwright</a>.
         <br>Original idea from <a target="_blank" href="https://itunes.apple.com/us/app/hackers-quest/id995672666?mt=8">Hacker's Quest.</a>
         <br>Type 'help' for a list of commands.
+        <center><span class="blink_me">•</span></center>
         <div id="output"></div>
         <br>gavin@localhost:~$
         <input class="wider"></input>
