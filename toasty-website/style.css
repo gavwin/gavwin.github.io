@@ -1,7 +1,11 @@
 .footer {
-    height:200px;
-    display: table-cell;
-    vertical-align: bottom;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
 
 .typed-cursor{
