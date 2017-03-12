@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   </head>
   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <style>
      .wrapper { 
   height: 100%;
@@ -43,7 +44,7 @@ background-size: 1800% 1800%;
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
 }
-      h1 {
+      body {
         color: #0072BB;
         font-family: 'Lobster', cursive;
         font-size: 100px;
@@ -53,13 +54,13 @@ background-size: 1800% 1800%;
 <script>
   document.addEventListener('DOMContentLoaded', function(){
       Typed.new('.element', {
-        strings: ["First sentence.", "Second sentence."],
+        strings: ["My name is Ava", "and I'm 7 years old."],
         typeSpeed: 0
       });
   });
 </script>
     <div class="wrapper">
-      <div class="element"><center><h1>I'm 7 years old.</h1></center></div>
+      <center><div class="element"></div></center>
       </div>
   </body>
 </html>
