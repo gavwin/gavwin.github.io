@@ -1,21 +1,31 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Simple Ocrad.js Example</title>
+		<title>Numeric Ocrad.js Example</title>
 		<style>
 			body {
 				background: whiteSmoke;
 				font-family: sans-serif;
 				margin: 30px;
 			}
-			#transcription, #pic {
+			#transcription, #nose {
 				background: white;
 				display: inline-block;
 				border: 1px solid #ddd;
 				margin: 10px;
+				min-height: 300px;
+				flex-grow: 1;
+			}
+			#nose {
+				text-align: center;
+				font-size: 50px;
+				padding: 10px;
+			}
+			#nose img {
+				width: 400px;
 			}
 			#transcription {
-				font-size: 30px;
+				font-size: 20px;
 				padding: 30px;
 				min-width: 300px;
 				color: gray;
@@ -29,23 +39,47 @@
 		</style>
 	</head>
 	<body>
-		<h1>Simple Ocrad.js Example</h1>
+		<h1>Ocrad.js Example: Loading from file</h1>
 
-		<script src="https://raw.githubusercontent.com/antimatter15/ocrad.js/master/ocrad.js"></script>
+		<script src="../../ocrad.js"></script>
 		<script>
 			function recognize_image(){
 				document.getElementById('transcription').innerText = "(Recognizing...)"
-				OCRAD(document.getElementById("pic"), function(text){
-					document.getElementById('transcription').className = "done"
-					document.getElementById('transcription').innerText = text;
+				OCRAD(document.getElementById("pic"), {
+					numeric: true
+				}, function(text){
+					
 				})
 			}
+			function load_file () {
+				var reader = new FileReader();
+				reader.onload = function(){
+					var img = new Image();
+					img.src = reader.result;
+					img.onload = function(){
+						document.getElementById('nose').innerHTML = ''
+						document.getElementById('nose').appendChild(img)
+						OCRAD(img, function(text){
+							document.getElementById('transcription').className = "done"
+							document.getElementById('transcription').innerText = text;
+						})
+					}
+				}
+				reader.readAsDataURL(document.getElementById('picker').files[0])
+			}
 		</script>
-
+		
+		
+		<input type="file" onchange="load_file()" id="picker">		
 		<div id="main">
-			<img id="pic" src="img/message.png" onload="recognize_image()">
+			<div id="nose">
+				<p>No file loaded</p>
+				<p style="font-size: 25px"> Open a file first </p>
+				<p style="font-size: 15px">it's okay. I'll wait. </p>
+				<p style="font-size: 10px">no seriously, I can't move</p>
+				<p style="font-size: 8px">still waiting...</p>
+			</div>
 			<div id="transcription"></div>
 		</div>
 	</body>	
 </html>
-
