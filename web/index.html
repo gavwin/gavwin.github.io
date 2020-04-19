@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>slowed + reverb</title>
+  <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <audio id="music" preload="auto" type="audio/mpeg">
+      <!--<source id="audioSource" type="audio/mp3"/>-->
+    </audio>
+
+    <div class="centered">
+      <p id="songName" style="color: white;"></p>
+      <br><br><br>
+    </div>
+    <div class="centered" id="audio_player" style="margin: 0 auto;">
+      <progress id="progress-bar" min="0" max="100" value="0">0% played</progress>
+      <button id="btnPlayPause" class="play" title="play" accesskey="P" onclick="playPauseAudio();">⏯</button>
+    </div>
+  </body>
+</html>
