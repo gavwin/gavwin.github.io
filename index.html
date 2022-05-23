@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>slowed + reverb</title>
+    <link rel="stylesheet" href="public/css/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png">
+    <link rel="manifest" href="public/images/site.webmanifest">
+    <script src="public/js/main.js" defer></script>
+  </head>
+  <body>
+    <audio id="music" preload="auto" type="audio/mpeg"></audio>
+
+    <div class="centered">
+      <p id="songName" style="color: white;"></p>
+      <br><br><br>
+    </div>
+    <div class="centered" id="audio_player" style="margin: 0 auto;">
+      <progress id="progress-bar" min="0" max="100" value="0">0% played</progress>
+      <button id="btnPlayPause" class="play" title="play" accesskey="P" onclick="playPauseAudio();">⏯</button>
+    </div>
+    <p style="position: absolute; bottom: 0; left: 0; color: white; font-size: 14px; letter-spacing: 0.5px;">&nbsp;&#x1F6C8; <a style="color: inherit;" href="/about.html">about</a></p>
+  </body>
+</html>

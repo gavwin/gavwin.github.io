@@ -1,0 +1,36 @@
+body, html, canvas {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  background-color: #262626;
+  cursor: none;
+}
+
+h1 {
+  position: absolute;
+  z-index: 1000;
+  margin-left: 25px;
+  color: #ecf0f1;
+  font-size: 33px;
+  top: 10px;
+  pointer-events: none;
+}
+
+.particles {
+  width: 135px;
+  height: 45px;
+  background-color: lightgray;
+  top: 0px;
+  right: 0px;
+  position: fixed;
+  line-height: 22px;
+  font-size: 20px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  color: #151B1F;
+  text-align: center;
+}
+
+a {
+  color: #1abc9c;
+}

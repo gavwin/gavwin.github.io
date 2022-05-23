@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Mystery - Connection Failed</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="screen">Failed to establish a connection to root@m4sk
+        <br>Type 'exit' to get back to gavin@localhost.
+        <div id="output"></div>
+        <br>login:~$
+        <input></input>
+    </div>
+    
+    <script> 
+        var $out = $("#output");
+        $("#screen input").focus();
+        $("#screen input").on('keydown', function(event) {
+            if (event.which === 13) {
+                var $this = $(this),
+                    valArgs = $this.val();
+                $this.focus().val('');
+                var val = valArgs.toLowerCase();
+                function cmdUse() {
+                    $out.append(`login:~$ ${val}<br>`);   
+                }
+                if (val === "") {
+                    $out.append("login:~$<br>");
+                } else
+                    if (val === "exit") {
+                    cmdUse();
+                    $out.append("Successfully exited.<br>");
+                    $out.append("Connecting to gavin@localhost");
+                                          setTimeout(function() {
+                        $out.append(".");
+                    }, 1000);
+                    setTimeout(function() {
+                        $out.append(".");
+                    }, 2000);
+                    setTimeout(function() {
+                        $out.append(".");
+                    }, 3000);
+                    setTimeout(function() {
+                        $out.append(".");
+                    }, 4000);
+                    setTimeout(function() {
+                        $out.append(".<br>");
+                    }, 5000);
+                    setTimeout(function() { window.location.href = "https://gavwin.github.io/Terminal%20Mystery/"; }, 5100);
+                    } else {
+                    cmdUse();
+                    $out.append("Command not recognized.<br>");
+                }
+                $this.val('');
+            }
+        });
+    </script>
+</body>
+</html>
