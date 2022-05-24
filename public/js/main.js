@@ -29,7 +29,8 @@ let songs = [
   { name: "slow dancing in the dark", artist: "joji", gif: "https://data.whicdn.com/images/292168915/original.gif" },
   { name: "nothin' on you", artist: "b.o.b. & bruno mars", gif: "https://i.pinimg.com/originals/eb/43/ba/eb43ba6e9cda38c585a23fe3d1a79c9b.gif" },
   { name: "had enough", artist: "don toliver, offset & quavo", gif: "https://media2.giphy.com/media/wKnqovL33x9in9ci6X/giphy.gif" },
-  { name: "acid trip", artist: "rejjie snow", gif: "https://i.ibb.co/3Y3RG3z/acid.gif" }
+  { name: "acid trip", artist: "rejjie snow", gif: "https://i.ibb.co/3Y3RG3z/acid.gif" },
+  { name: "test & recognize", artist: "seekae, flume", gif: "https://c.tenor.com/k2V7yl0m9I0AAAAC/cidade.gif "}
 ];
 
 setupPage();
