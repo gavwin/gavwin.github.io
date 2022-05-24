@@ -71,6 +71,21 @@ button {
   position: fixed;
   top: 50%;
   left: 50%;
+  margin: 0 auto;
+  font-size: 18px;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+
+#songName {
+  color: white;
+}
+
+#about {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
