@@ -30,7 +30,11 @@ let songs = [
   { name: "nothin' on you", artist: "b.o.b. & bruno mars", gif: "https://i.pinimg.com/originals/eb/43/ba/eb43ba6e9cda38c585a23fe3d1a79c9b.gif" },
   { name: "had enough", artist: "don toliver, offset & quavo", gif: "https://media2.giphy.com/media/wKnqovL33x9in9ci6X/giphy.gif" },
   { name: "acid trip", artist: "rejjie snow", gif: "https://i.ibb.co/3Y3RG3z/acid.gif" },
-  { name: "test & recognize", artist: "seekae & flume", gif: "https://c.tenor.com/k2V7yl0m9I0AAAAC/cidade.gif "}
+  { name: "test & recognize", artist: "seekae & flume", gif: "https://c.tenor.com/k2V7yl0m9I0AAAAC/cidade.gif "},
+  { name: "lost souls", artist: "baby keem ft. brent faiyaz", gif: "https://c.tenor.com/LgTXUCpjUkoAAAAC/wandering-soul-lost-soul.gif" },
+  { name: "9am in calabasas", artist: "playboi carti [prod. adrian]", gif: "https://64.media.tumblr.com/72e6aa414f2797e0cd6080ac26fd85bb/tumblr_pcsvexSuDs1x0j068o1_500.gifv" },
+  { name: "passionfruit", artist: "drake", gif: "https://thumbs.gfycat.com/BrownScornfulGonolek-size_restricted.gif" },
+  { name: "16", artist: "baby keem", gif: "https://i.ibb.co/7g863SH/void.gif" }
 ];
 
 setupPage();
