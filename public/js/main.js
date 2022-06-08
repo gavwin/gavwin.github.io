@@ -102,7 +102,9 @@ function readCookie(name) {
 
 function setupPage() { 
   let song = songs[Math.floor(Math.random() * songs.length)]
-  if (readCookie("songs").includes(song.name)) return setupPage();
+  try {
+    if (readCookie("songs").includes(song.name)) return setupPage();
+  } catch(err) {}
   document.body.style.setProperty("background-image", "url(\"" + song.gif + "\")");
   document.getElementById("songName").innerHTML = "now playing: " + song.artist + " - " + song.name;
   source.setAttribute("src", "public/audio/" + song.name + ".mp3");
