@@ -76,9 +76,35 @@ function updateProgressBar() {
   progressBar.innerHTML = progressBar.title = percentage + "% played";
 }
 
+function setCookie(name, value) {
+  var cookie = [
+      name,
+      "",
+      JSON.stringify(value)
+  ].join('');
+  document.cookie = cookie;
+}
+
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(";");
+  for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) {
+          return JSON.parse(
+              c.substring(nameEQ.length, c.length)
+          );
+      }
+  }
+  return null;
+}
+
 function setupPage() { 
-  let song = songs[Math.floor(Math.random()*songs.length)];
+  let song = songs[Math.floor(Math.random() * songs.length)]
+  if (readCookie("songs").includes(song.name)) return setupPage();
   document.body.style.setProperty("background-image", "url(\"" + song.gif + "\")");
   document.getElementById("songName").innerHTML = "now playing: " + song.artist + " - " + song.name;
   source.setAttribute("src", "public/audio/" + song.name + ".mp3");
+  setCookie("songs", song.name);
 }
